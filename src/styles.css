@@ -1,3 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* =========================
+   Root Variables (Global)
+========================= */
+:root {
+  --color-primary-dark: #452829;
+  --color-secondary-dark: #57595B;
+  --color-light-accent: #E8D1C5;
+  --color-bg-light: #F3E8DF;
+
+  /* Dark Mode Palette */
+  --color-dark-bg: #1a1a1a;
+  --color-dark-card: #2d2d2d;
+  --color-dark-text: #e5e7eb;
+  --color-dark-accent: #d1b9ae;
+
+  /* Aliases */
+  --primary-dark: var(--color-primary-dark);
+  --secondary-dark: var(--color-secondary-dark);
+  --light-accent: var(--color-light-accent);
+  --bg-light: var(--color-bg-light);
+}
+
+/* =========================
+   Default Light Mode
+========================= */
+body {
+  background-color: var(--bg-light);
+  color: var(--primary-dark);
+  font-family: 'Inter', 'Roboto', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   Dark Mode (Applied on body)
+========================= */
+body.dark-mode {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+}
+
+/* Cards / Containers */
+body.dark-mode .bg-white {
+  background-color: var(--color-dark-card) !important;
+  color: var(--color-dark-text) !important;
+}
+
+/* Tailwind custom text colors (escaped properly) */
+body.dark-mode .text-\[\#452829\] {
+  color: var(--color-dark-accent) !important;
+}
+
+body.dark-mode .text-\[\#57595B\] {
+  color: #a1a1aa !important;
+}
+
+/* Borders */
+body.dark-mode .border-gray-100 {
+  border-color: #3f3f46 !important;
+}
+
+/* Custom background */
+body.dark-mode .bg-\[\#F3E8DF\] {
+  background-color: #3f3f46 !important;
+}

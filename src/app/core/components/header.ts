@@ -21,9 +21,15 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <div
         class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition duration-300 group-hover:rotate-6">
 
-        <span class="text-white text-xl font-black">
-          T
-        </span>
+<div
+  class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition duration-300 group-hover:rotate-6">
+
+  <img
+    src="assets/trident_logo.png"
+    alt="Tech Trident Logo"
+    class="w-8 h-8 object-contain" />
+
+</div>
 
       </div>
 

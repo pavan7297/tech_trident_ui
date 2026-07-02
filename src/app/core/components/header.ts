@@ -27,7 +27,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   <img
     src="assets/trident_logo.png"
     alt="Tech Trident Logo"
-    class="w-8 h-8 object-contain" />
+    class="w-12 h-12 object-contain" />
 
 <!-- </div> -->
 

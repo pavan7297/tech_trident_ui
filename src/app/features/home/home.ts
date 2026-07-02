@@ -8,235 +8,704 @@ import { RouterLink } from '@angular/router';
   template: `
     <div class="flex flex-col gap-20">
       <!-- Hero Section -->
-      <section class="relative overflow-hidden bg-[#F3E8DF] py-24 lg:py-32">
-        <div class="absolute inset-0 opacity-30 pointer-events-none">
-          <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#E8D1C5] rounded-full blur-3xl"></div>
-          <div
-            class="absolute top-1/2 -right-24 w-96 h-96 bg-[#C8B1A5] rounded-full blur-3xl"
-          ></div>
-        </div>
+<section
+  class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 py-24 lg:py-32"
+>
+  <!-- Animated Background -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1
-            class="text-5xl md:text-7xl font-bold text-[#452829] mb-6 tracking-tight leading-tight"
-          >
-            Building Scalable Digital <br class="hidden md:block" />
-            Solutions for Modern Businesses
-          </h1>
-          <p class="text-xl text-[#57595B] max-w-3xl mx-auto mb-10 leading-relaxed">
-            Custom software, intelligent systems, and high-performance websites tailored for growth.
-            We turn complex challenges into seamless digital experiences.
-          </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              routerLink="/contact"
-              class="bg-[#452829] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-[#57595B] transition-all shadow-lg w-full sm:w-auto"
-            >
-              Get Started
-            </a>
-            <a
-              routerLink="/portfolio"
-              class="bg-white text-[#452829] border-2 border-[#452829] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#E8D1C5] transition-all w-full sm:w-auto"
-            >
-              View Portfolio
-            </a>
-          </div>
-        </div>
-      </section>
+    <div
+      class="absolute -top-32 -left-24 w-[34rem] h-[34rem] rounded-full bg-cyan-500/20 blur-[120px] animate-pulse"
+    ></div>
+
+    <div
+      class="absolute top-1/3 -right-24 w-[30rem] h-[30rem] rounded-full bg-violet-500/20 blur-[120px] animate-pulse"
+      style="animation-delay:1s"
+    ></div>
+
+    <div
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[28rem] h-[28rem] rounded-full bg-blue-500/10 blur-[120px] animate-pulse"
+      style="animation-delay:2s"
+    ></div>
+
+    <!-- Grid Pattern -->
+    <div
+      class="absolute inset-0 opacity-[0.04]"
+      style="
+        background-image:
+          linear-gradient(to right, white 1px, transparent 1px),
+          linear-gradient(to bottom, white 1px, transparent 1px);
+        background-size:60px 60px;
+      "
+    ></div>
+
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+    <div
+      class="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full border border-cyan-400/30 bg-white/5 backdrop-blur-xl shadow-lg"
+    >
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+      <span class="text-cyan-300 text-sm font-medium tracking-wide">
+        Premium Software Development
+      </span>
+    </div>
+
+    <h1
+      class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight"
+    >
+      Building Scalable Digital
+      <br class="hidden md:block" />
+      <span
+        class="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent"
+      >
+        Solutions for Modern Businesses
+      </span>
+    </h1>
+
+    <p
+      class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed"
+    >
+      Custom software, intelligent systems, and high-performance websites
+      tailored for growth. We turn complex challenges into seamless digital
+      experiences.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+
+      <a
+        routerLink="/contact"
+        class="group relative overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-9 py-4 rounded-full text-lg font-semibold shadow-2xl shadow-cyan-500/30 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/50 w-full sm:w-auto"
+      >
+        <span class="relative z-10 flex items-center justify-center gap-2">
+          Get Started
+          <i
+            class="pi pi-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+          ></i>
+        </span>
+
+        <span
+          class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        ></span>
+      </a>
+
+      <a
+        routerLink="/portfolio"
+        class="group bg-white/10 backdrop-blur-xl border border-white/20 text-white px-9 py-4 rounded-full text-lg font-semibold shadow-xl transition-all duration-500 hover:bg-white hover:text-slate-900 hover:scale-105 w-full sm:w-auto"
+      >
+        <span class="flex items-center justify-center gap-2">
+          View Portfolio
+          <i
+            class="pi pi-external-link transition-transform duration-300 group-hover:rotate-12"
+          ></i>
+        </span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
 
       <!-- Services Overview -->
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-5xl font-bold text-[#452829] mb-4">Our Core Expertise</h2>
-          <div class="w-20 h-1.5 bg-[#452829] mx-auto rounded-full"></div>
+<section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-0 left-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-[120px] animate-pulse"></div>
+    <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-violet-500/10 rounded-full blur-[120px] animate-pulse" style="animation-delay:1.5s"></div>
+  </div>
+
+  <div class="relative z-10">
+
+    <div class="text-center mb-20">
+
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-600 text-sm font-semibold backdrop-blur-xl mb-6"
+      >
+        <i class="pi pi-star-fill text-xs"></i>
+        What We Do
+      </span>
+
+      <h2
+        class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6"
+      >
+        Our
+        <span
+          class="bg-gradient-to-r from-cyan-600 via-blue-600 to-violet-600 bg-clip-text text-transparent"
+        >
+          Core Expertise
+        </span>
+      </h2>
+
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+        We build scalable digital products using modern technologies that help
+        businesses grow faster and smarter.
+      </p>
+
+      <div
+        class="w-28 h-1.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 mx-auto rounded-full mt-8"
+      ></div>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      @for (service of services; track service.title) {
+
+      <div
+        class="group relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/80 backdrop-blur-xl p-8 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-400/30"
+      >
+
+        <!-- Hover Glow -->
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-violet-500/0 group-hover:from-cyan-500/5 group-hover:via-blue-500/5 group-hover:to-violet-500/10 transition-all duration-700"
+        ></div>
+
+        <!-- Top Accent -->
+        <div
+          class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"
+        ></div>
+
+        <div class="relative z-10">
+
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-7 shadow-lg shadow-cyan-500/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+          >
+            <i
+              [class]="service.icon"
+              class="text-2xl text-white transition-transform duration-500 group-hover:scale-125"
+            ></i>
+          </div>
+
+          <h3
+            class="text-2xl font-bold text-slate-900 mb-4 transition-colors duration-300 group-hover:text-cyan-600"
+          >
+            {{ service.title }}
+          </h3>
+
+          <p class="text-slate-600 mb-8 leading-relaxed">
+            {{ service.description }}
+          </p>
+
+          <a
+            routerLink="/services"
+            class="inline-flex items-center gap-2 text-cyan-600 font-semibold transition-all duration-300 group-hover:gap-4 group-hover:text-blue-700"
+          >
+            Learn More
+            <i
+              class="pi pi-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-2"
+            ></i>
+          </a>
+
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          @for (service of services; track service.title) {
-            <div
-              class="group p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-            >
-              <div
-                class="w-14 h-14 bg-[#F3E8DF] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#E8D1C5] transition-colors"
-              >
-                <i [class]="service.icon" class="text-2xl text-[#452829]"></i>
-              </div>
-              <h3 class="text-2xl font-bold text-[#452829] mb-3">{{ service.title }}</h3>
-              <p class="text-[#57595B] mb-6 leading-relaxed">
-                {{ service.description }}
-              </p>
-              <a
-                routerLink="/services"
-                class="text-[#452829] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all"
-              >
-                Learn More <i class="pi pi-arrow-right text-sm"></i>
-              </a>
-            </div>
-          }
-        </div>
-      </section>
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
 
       <!-- Why Choose Us -->
-      <section class="bg-[#452829] text-[#E8D1C5] py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<section
+  class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white py-24"
+>
+  <!-- Background Effects -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+
+    <div
+      class="absolute -top-24 -left-24 w-[30rem] h-[30rem] rounded-full bg-cyan-500/15 blur-[120px] animate-pulse"
+    ></div>
+
+    <div
+      class="absolute bottom-0 right-0 w-[32rem] h-[32rem] rounded-full bg-violet-500/15 blur-[120px] animate-pulse"
+      style="animation-delay:1.5s"
+    ></div>
+
+    <!-- Grid -->
+    <div
+      class="absolute inset-0 opacity-[0.05]"
+      style="
+        background-image:
+        linear-gradient(to right,white 1px,transparent 1px),
+        linear-gradient(to bottom,white 1px,transparent 1px);
+        background-size:60px 60px;
+      "
+    ></div>
+
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+      <!-- Left Content -->
+      <div>
+
+        <span
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 backdrop-blur-xl text-cyan-300 font-medium mb-8"
+        >
+          <i class="pi pi-shield"></i>
+          Why Choose Us
+        </span>
+
+        <h2
+          class="text-4xl md:text-6xl font-extrabold mb-8 leading-tight"
+        >
+          Why
+          <span
+            class="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent"
+          >
+            Tech Trident
+          </span>
+          is Your
+          <br />
+          Best Digital Partner
+        </h2>
+
+        <p class="text-lg text-slate-300 mb-12 leading-relaxed">
+          We don't just write code; we architect solutions that drive business
+          growth. Our approach combines technical excellence with a deep
+          understanding of market needs.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+          @for (point of highlights; track point.title) {
+
+          <div
+            class="group flex gap-4 rounded-2xl p-4 transition-all duration-500 hover:bg-white/5 hover:backdrop-blur-xl hover:translate-x-2"
+          >
+
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12"
+            >
+              <i class="pi pi-check text-white font-bold"></i>
+            </div>
+
             <div>
-              <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Why Tech Trident is Your <br />
-                Best Digital Partner
-              </h2>
-              <p class="text-lg opacity-80 mb-12 leading-relaxed">
-                We don't just write code; we architect solutions that drive business growth. Our
-                approach combines technical excellence with a deep understanding of market needs.
-              </p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                @for (point of highlights; track point.title) {
-                  <div class="flex gap-4">
-                    <div
-                      class="flex-shrink-0 w-6 h-6 rounded-full bg-[#E8D1C5] flex items-center justify-center"
-                    >
-                      <i class="pi pi-check text-[#452829] text-xs font-bold"></i>
-                    </div>
-                    <div>
-                      <h4 class="font-bold text-white mb-1">{{ point.title }}</h4>
-                      <p class="text-sm opacity-70">{{ point.text }}</p>
-                    </div>
-                  </div>
-                }
-              </div>
-            </div>
-            <div class="relative">
-              <div
-                class="aspect-square bg-[#57595B] rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center"
+              <h4
+                class="font-bold text-white text-lg mb-2 transition-colors duration-300 group-hover:text-cyan-300"
               >
-                <i class="pi pi-bolt text-9xl text-[#E8D1C5] opacity-20"></i>
-                <div class="absolute inset-0 flex items-center justify-center p-12">
-                  <div
-                    class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center"
-                  >
-                    <span class="text-5xl font-bold text-white block mb-2">100%</span>
-                    <span class="text-sm uppercase tracking-widest opacity-70"
-                      >Custom Solutions</span
-                    >
-                  </div>
-                </div>
-              </div>
+                {{ point.title }}
+              </h4>
+
+              <p class="text-sm text-slate-400 leading-relaxed">
+                {{ point.text }}
+              </p>
             </div>
+
           </div>
+
+          }
+
         </div>
-      </section>
+
+      </div>
+
+      <!-- Right Card -->
+      <div class="relative flex justify-center">
+
+        <!-- Glow -->
+        <div
+          class="absolute w-80 h-80 rounded-full bg-cyan-500/20 blur-[100px] animate-pulse"
+        ></div>
+
+        <div
+          class="relative aspect-square w-full max-w-md rounded-[32px] overflow-hidden border border-white/10 bg-gradient-to-br from-slate-800/90 via-slate-900 to-slate-950 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all duration-700 hover:scale-105 hover:shadow-cyan-500/20"
+        >
+
+          <!-- Decorative Circles -->
+          <div
+            class="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-cyan-500/10 blur-3xl"
+          ></div>
+
+          <div
+            class="absolute -bottom-16 -left-16 w-40 h-40 rounded-full bg-violet-500/10 blur-3xl"
+          ></div>
+
+          <!-- Icon -->
+          <div
+            class="absolute inset-0 flex items-center justify-center"
+          >
+            <i
+              class="pi pi-bolt text-[10rem] text-cyan-400/10 animate-pulse"
+            ></i>
+          </div>
+
+          <!-- Glass Card -->
+          <div
+            class="absolute inset-0 flex items-center justify-center p-12"
+          >
+
+            <div
+              class="w-full rounded-3xl border border-white/10 bg-white/10 backdrop-blur-2xl p-10 text-center shadow-2xl"
+            >
+
+              <div
+                class="text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent mb-3"
+              >
+                100%
+              </div>
+
+              <span
+                class="text-sm uppercase tracking-[0.35em] text-slate-300"
+              >
+                Custom Solutions
+              </span>
+
+              <div
+                class="mt-8 h-2 rounded-full bg-slate-700 overflow-hidden"
+              >
+                <div
+                  class="h-full w-full rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500"
+                ></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       <!-- Portfolio Preview -->
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div class="max-w-2xl">
-            <h2 class="text-3xl md:text-5xl font-bold text-[#452829] mb-4">Featured Projects</h2>
-            <p class="text-[#57595B]">
-              A glimpse into the scalable solutions we've delivered for our clients across various
-              industries.
-            </p>
+<section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div
+      class="absolute top-10 left-1/4 w-72 h-72 rounded-full bg-cyan-500/10 blur-[120px] animate-pulse"
+    ></div>
+
+    <div
+      class="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-violet-500/10 blur-[120px] animate-pulse"
+      style="animation-delay:1.5s"
+    ></div>
+  </div>
+
+  <div class="relative z-10">
+
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+
+      <div class="max-w-2xl">
+
+        <span
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-600 text-sm font-semibold backdrop-blur-xl mb-6"
+        >
+          <i class="pi pi-briefcase"></i>
+          Portfolio Showcase
+        </span>
+
+        <h2
+          class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6"
+        >
+          Featured
+          <span
+            class="bg-gradient-to-r from-cyan-600 via-blue-600 to-violet-600 bg-clip-text text-transparent"
+          >
+            Projects
+          </span>
+        </h2>
+
+        <p class="text-lg text-slate-500 leading-relaxed">
+          A glimpse into the scalable solutions we've delivered for our clients
+          across various industries.
+        </p>
+
+      </div>
+
+      <a
+        routerLink="/portfolio"
+        class="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/40"
+      >
+        View All Work
+
+        <i
+          class="pi pi-arrow-right transition-transform duration-300 group-hover:translate-x-2"
+        ></i>
+      </a>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      @for (project of featuredProjects; track project.title) {
+
+      <div
+        class="group relative overflow-hidden rounded-[30px] aspect-[16/10] border border-slate-200 bg-slate-900 shadow-xl transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_30px_80px_rgba(6,182,212,0.25)]"
+      >
+
+        <!-- Image -->
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+          [style.background-image]="'url(' + project.img + ')'"
+        ></div>
+
+        <!-- Gradient Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent"
+        ></div>
+
+        <!-- Hover Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-transparent to-violet-500/0 group-hover:from-cyan-500/10 group-hover:to-violet-500/10 transition-all duration-700"
+        ></div>
+
+        <!-- Floating Glass Card -->
+        <div
+          class="absolute bottom-0 left-0 right-0 p-8 backdrop-blur-xl bg-gradient-to-t from-black/70 to-transparent"
+        >
+
+          <div class="flex flex-wrap gap-2 mb-5">
+
+            @for (tech of project.tech; track tech) {
+
+            <span
+              class="px-3 py-1 rounded-full text-[11px] uppercase tracking-widest bg-white/10 border border-white/10 backdrop-blur-xl text-cyan-200 transition-all duration-300 group-hover:bg-cyan-500/20"
+            >
+              {{ tech }}
+            </span>
+
+            }
+
           </div>
+
+          <h3
+            class="text-3xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300"
+          >
+            {{ project.title }}
+          </h3>
+
+          <p class="text-slate-300 text-sm leading-relaxed mb-6 line-clamp-2">
+            {{ project.description }}
+          </p>
+
           <a
             routerLink="/portfolio"
-            class="bg-[#452829] text-white px-6 py-3 rounded-full font-medium hover:bg-[#57595B] transition-all"
+            class="group/link inline-flex items-center gap-2 text-cyan-300 font-semibold transition-all duration-300 hover:text-white"
           >
-            View All Work
+            View Details
+
+            <i
+              class="pi pi-arrow-right text-xs transition-transform duration-300 group-hover/link:translate-x-2"
+            ></i>
+
           </a>
+
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          @for (project of featuredProjects; track project.title) {
-            <div class="group relative overflow-hidden rounded-3xl bg-gray-200 aspect-[16/10]">
-              <!-- Placeholder for screenshot -->
-              <div
-                class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                [style.background-image]="'url(' + project.img + ')'"
-              ></div>
-
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#452829] via-transparent to-transparent opacity-80"
-              ></div>
-
-              <div class="absolute bottom-0 left-0 p-8 text-white">
-                <div class="flex gap-2 mb-3">
-                  @for (tech of project.tech; track tech) {
-                    <span
-                      class="text-[10px] uppercase tracking-wider bg-white/20 backdrop-blur-md px-2 py-1 rounded-md"
-                      >{{ tech }}</span
-                    >
-                  }
-                </div>
-                <h3 class="text-2xl font-bold mb-2">{{ project.title }}</h3>
-                <p class="text-sm opacity-80 mb-4 line-clamp-2">{{ project.description }}</p>
-                <a
-                  routerLink="/portfolio"
-                  class="inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4 hover:text-[#E8D1C5] transition-colors"
-                >
-                  View Details <i class="pi pi-arrow-right text-xs"></i>
-                </a>
-              </div>
-            </div>
-          }
-        </div>
-      </section>
-
-      <!-- Process Section -->
-      <section class="bg-[#F3E8DF] py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-[#452829] mb-4">Our Proven Process</h2>
-            <p class="text-[#57595B]">
-              From a spark of an idea to a fully deployed scalable system.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-            @for (step of processSteps; track step.title) {
-              <div class="relative p-6 bg-white rounded-2xl shadow-sm text-center">
-                <div
-                  class="w-12 h-12 bg-[#452829] text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl"
-                >
-                  {{ $index + 1 }}
-                </div>
-                <h4 class="font-bold text-[#452829] mb-2">{{ step.title }}</h4>
-                <p class="text-xs text-[#57595B]">{{ step.desc }}</p>
-
-                @if ($index < processSteps.length - 1) {
-                  <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10">
-                    <i class="pi pi-arrow-right text-[#452829] opacity-30"></i>
-                  </div>
-                }
-              </div>
-            }
-          </div>
-        </div>
-      </section>
-
-      <!-- Final CTA -->
-      <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <!-- Top Right Floating Button -->
         <div
-          class="bg-[#452829] rounded-3xl p-12 md:p-20 text-white relative overflow-hidden shadow-2xl"
+          class="absolute top-5 right-5 w-12 h-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:rotate-12"
         >
-          <div
-            class="absolute -top-10 -right-10 w-64 h-64 bg-[#E8D1C5] rounded-full blur-3xl opacity-20"
-          ></div>
-          <div class="relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">
-              Ready to build your next digital product?
-            </h2>
-            <p class="text-lg opacity-80 mb-10 max-w-2xl mx-auto">
-              Let's collaborate to create a high-performance solution that scales with your
-              business.
-            </p>
-            <a
-              routerLink="/contact"
-              class="bg-[#E8D1C5] text-[#452829] px-10 py-4 rounded-full text-lg font-bold hover:bg-white transition-all shadow-xl inline-block"
-            >
-              Contact Us Now
-            </a>
-          </div>
+          <i class="pi pi-external-link text-white"></i>
         </div>
-      </section>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Process Section -->
+<section
+  class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50 py-24"
+>
+  <!-- Background Glow -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+
+    <div
+      class="absolute -top-20 left-20 w-80 h-80 rounded-full bg-cyan-500/10 blur-[120px] animate-pulse"
+    ></div>
+
+    <div
+      class="absolute bottom-0 right-10 w-96 h-96 rounded-full bg-violet-500/10 blur-[120px] animate-pulse"
+      style="animation-delay:1.5s"
+    ></div>
+
+    <div
+      class="absolute inset-0 opacity-[0.04]"
+      style="
+      background-image:
+      linear-gradient(to right,#0f172a 1px,transparent 1px),
+      linear-gradient(to bottom,#0f172a 1px,transparent 1px);
+      background-size:60px 60px;
+    "
+    ></div>
+
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-20">
+
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-700 font-semibold backdrop-blur-xl mb-6"
+      >
+        <i class="pi pi-sitemap"></i>
+        Development Workflow
+      </span>
+
+      <h2
+        class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6"
+      >
+        Our
+        <span
+          class="bg-gradient-to-r from-cyan-600 via-blue-600 to-violet-600 bg-clip-text text-transparent"
+        >
+          Proven Process
+        </span>
+      </h2>
+
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        From a spark of an idea to a fully deployed scalable system.
+      </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+
+      @for (step of processSteps; track step.title) {
+
+      <div
+        class="group relative rounded-3xl border border-slate-200 bg-white/80 backdrop-blur-xl p-8 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-400/30 text-center"
+      >
+
+        <!-- Hover Top Line -->
+        <div
+          class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full"
+        ></div>
+
+        <!-- Step Number -->
+        <div
+          class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white flex items-center justify-center mx-auto mb-6 font-bold text-2xl shadow-lg shadow-cyan-500/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+        >
+          {{ $index + 1 }}
+        </div>
+
+        <h4
+          class="font-bold text-slate-900 text-lg mb-3 group-hover:text-cyan-600 transition-colors"
+        >
+          {{ step.title }}
+        </h4>
+
+        <p class="text-sm text-slate-500 leading-relaxed">
+          {{ step.desc }}
+        </p>
+
+        @if ($index < processSteps.length - 1) {
+
+        <div
+          class="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg border border-slate-200 items-center justify-center"
+        >
+          <i
+            class="pi pi-arrow-right text-cyan-600 text-sm animate-pulse"
+          ></i>
+        </div>
+
+        }
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Final CTA -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+
+  <div
+    class="relative overflow-hidden rounded-[36px] bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white shadow-[0_40px_100px_rgba(0,0,0,0.45)]"
+  >
+
+    <!-- Background -->
+    <div class="absolute inset-0 overflow-hidden">
+
+      <div
+        class="absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-cyan-500/20 blur-[120px] animate-pulse"
+      ></div>
+
+      <div
+        class="absolute bottom-0 right-0 w-[30rem] h-[30rem] rounded-full bg-violet-500/20 blur-[120px] animate-pulse"
+        style="animation-delay:1.5s"
+      ></div>
+
+      <div
+        class="absolute inset-0 opacity-[0.05]"
+        style="
+          background-image:
+          linear-gradient(to right,white 1px,transparent 1px),
+          linear-gradient(to bottom,white 1px,transparent 1px);
+          background-size:60px 60px;
+        "
+      ></div>
+
+    </div>
+
+    <div class="relative z-10 p-12 md:p-20 text-center">
+
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/10 backdrop-blur-xl text-cyan-300 font-medium mb-8"
+      >
+        <i class="pi pi-rocket"></i>
+        Let's Build Something Amazing
+      </span>
+
+      <h2
+        class="text-4xl md:text-6xl font-extrabold leading-tight mb-8"
+      >
+        Ready to Build Your Next
+        <span
+          class="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent"
+        >
+          Digital Product?
+        </span>
+      </h2>
+
+      <p
+        class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-12"
+      >
+        Let's collaborate to create a high-performance solution that scales with
+        your business.
+      </p>
+
+      <a
+        routerLink="/contact"
+        class="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-10 py-5 text-lg font-bold text-white shadow-2xl shadow-cyan-500/30 transition-all duration-500 hover:scale-105 hover:shadow-cyan-500/50"
+      >
+        Contact Us Now
+
+        <i
+          class="pi pi-arrow-right transition-transform duration-300 group-hover:translate-x-2"
+        ></i>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
     </div>
   `,
 })

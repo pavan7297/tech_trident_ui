@@ -7,118 +7,239 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, CommonModule],
   template: `
-    <header
-      class="bg-white dark-mode:bg-[#2d2d2d] shadow-sm sticky top-0 z-50 transition-colors duration-300"
-    >
-      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center gap-2">
-          <div class="w-10 h-10 bg-[#452829] rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl">T</span>
-          </div>
-          <span class="text-xl font-bold text-[#452829] dark-mode:text-[#d1b9ae] tracking-tight"
-            >Tech Trident</span
-          >
-        </div>
+<header
+  class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-2xl supports-[backdrop-filter]:bg-slate-950/60">
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center gap-8">
-          <a
-            routerLink="/"
-            routerLinkActive="text-[#452829] dark-mode:text-[#d1b9ae] font-semibold"
-            class="text-[#57595B] dark-mode:text-gray-300 hover:text-[#452829] dark-mode:hover:text-white transition-colors"
-            >Home</a
-          >
-          <a
-            routerLink="/services"
-            routerLinkActive="text-[#452829] dark-mode:text-[#d1b9ae] font-semibold"
-            class="text-[#57595B] dark-mode:text-gray-300 hover:text-[#452829] dark-mode:hover:text-white transition-colors"
-            >Services</a
-          >
-          <a
-            routerLink="/portfolio"
-            routerLinkActive="text-[#452829] dark-mode:text-[#d1b9ae] font-semibold"
-            class="text-[#57595B] dark-mode:text-gray-300 hover:text-[#452829] dark-mode:hover:text-white transition-colors"
-            >Portfolio</a
-          >
-          <a
-            routerLink="/about"
-            routerLinkActive="text-[#452829] dark-mode:text-[#d1b9ae] font-semibold"
-            class="text-[#57595B] dark-mode:text-gray-300 hover:text-[#452829] dark-mode:hover:text-white transition-colors"
-            >About Us</a
-          >
-          <a
-            routerLink="/contact"
-            routerLinkActive="text-[#452829] dark-mode:text-[#d1b9ae] font-semibold"
-            class="text-[#57595B] dark-mode:text-gray-300 hover:text-[#452829] dark-mode:hover:text-white transition-colors"
-            >Contact</a
-          >
-        </div>
+  <nav
+    class="max-w-7xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
 
-        <!-- Right Actions -->
-        <div class="flex items-center gap-4">
-          <button
-            (click)="toggleDarkMode.emit()"
-            class="p-2 rounded-full bg-gray-100 dark-mode:bg-gray-700 text-gray-600 dark-mode:text-gray-300 hover:bg-gray-200 dark-mode:hover:bg-gray-600 transition-all"
-          >
-            <i [class]="darkMode() ? 'pi pi-sun' : 'pi pi-moon'" class="text-lg"></i>
-          </button>
+    <!-- Logo -->
+    <a
+      routerLink="/"
+      class="flex items-center gap-3 group">
 
-          <a
-            routerLink="/contact"
-            class="hidden sm:inline-block bg-[#452829] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#57595B] transition-all shadow-md"
-          >
-            Get Started
-          </a>
+      <div
+        class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition duration-300 group-hover:rotate-6">
 
-          <!-- Mobile Menu Button (NEW) -->
-          <button (click)="toggleMenu()" class="md:hidden p-2">
-            <i class="pi pi-bars text-xl"></i>
-          </button>
-        </div>
-      </nav>
+        <span class="text-white text-xl font-black">
+          T
+        </span>
 
-      <!-- Mobile Menu (NEW) -->
-      <div *ngIf="menuOpen()" class="md:hidden px-4 pb-4 space-y-3 bg-white dark-mode:bg-[#2d2d2d]">
-        <a
-          (click)="closeMenu()"
-          routerLink="/"
-          class="block text-[#57595B] dark-mode:text-gray-300 py-2 border-b"
-          >Home</a
-        >
-        <a
-          (click)="closeMenu()"
-          routerLink="/services"
-          class="block text-[#57595B] dark-mode:text-gray-300 py-2 border-b"
-          >Services</a
-        >
-        <a
-          (click)="closeMenu()"
-          routerLink="/portfolio"
-          class="block text-[#57595B] dark-mode:text-gray-300 py-2 border-b"
-          >Portfolio</a
-        >
-        <a
-          (click)="closeMenu()"
-          routerLink="/about"
-          class="block text-[#57595B] dark-mode:text-gray-300 py-2 border-b"
-          >About Us</a
-        >
-        <a
-          (click)="closeMenu()"
-          routerLink="/contact"
-          class="block text-[#57595B] dark-mode:text-gray-300 py-2"
-          >Contact</a
-        >
-
-        <a
-          routerLink="/contact"
-          class="block text-center bg-[#452829] text-white py-2 rounded-full"
-        >
-          Get Started
-        </a>
       </div>
-    </header>
+
+      <div>
+
+        <h1
+          class="text-xl font-bold text-white tracking-tight">
+          Tech Trident
+        </h1>
+
+        <p
+          class="text-xs text-cyan-300">
+          Digital Innovation
+        </p>
+
+      </div>
+
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div
+      class="hidden lg:flex items-center gap-2">
+
+      <a
+        routerLink="/"
+        routerLinkActive
+        #home="routerLinkActive"
+        [routerLinkActiveOptions]="{exact:true}"
+        class="relative px-5 py-2 rounded-xl transition-all duration-300"
+        [ngClass]="home.isActive
+        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+        : 'text-slate-300 hover:text-white hover:bg-white/5'">
+
+        Home
+
+      </a>
+
+      <a
+        routerLink="/services"
+        routerLinkActive
+        #services="routerLinkActive"
+        class="relative px-5 py-2 rounded-xl transition-all duration-300"
+        [ngClass]="services.isActive
+        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+        : 'text-slate-300 hover:text-white hover:bg-white/5'">
+
+        Services
+
+      </a>
+
+      <a
+        routerLink="/portfolio"
+        routerLinkActive
+        #portfolio="routerLinkActive"
+        class="relative px-5 py-2 rounded-xl transition-all duration-300"
+        [ngClass]="portfolio.isActive
+        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+        : 'text-slate-300 hover:text-white hover:bg-white/5'">
+
+        Portfolio
+
+      </a>
+
+      <a
+        routerLink="/about"
+        routerLinkActive
+        #about="routerLinkActive"
+        class="relative px-5 py-2 rounded-xl transition-all duration-300"
+        [ngClass]="about.isActive
+        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+        : 'text-slate-300 hover:text-white hover:bg-white/5'">
+
+        About
+
+      </a>
+
+      <a
+        routerLink="/contact"
+        routerLinkActive
+        #contact="routerLinkActive"
+        class="relative px-5 py-2 rounded-xl transition-all duration-300"
+        [ngClass]="contact.isActive
+        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
+        : 'text-slate-300 hover:text-white hover:bg-white/5'">
+
+        Contact
+
+      </a>
+
+    </div>
+
+    <!-- Right Side -->
+    <div
+      class="flex items-center gap-3">
+
+      <!-- Theme -->
+      <!-- <button
+        (click)="toggleDarkMode.emit()"
+        class="w-11 h-11 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition flex items-center justify-center text-slate-300 hover:text-white">
+
+        <i
+          [class]="darkMode() ? 'pi pi-sun' : 'pi pi-moon'"
+          class="text-lg">
+        </i>
+
+      </button> -->
+
+      <!-- CTA -->
+      <a
+        routerLink="/contact"
+        class="hidden sm:flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-600 px-6 py-3 text-white font-semibold shadow-xl hover:scale-105 transition">
+
+        Get Started
+
+        <i class="pi pi-arrow-right"></i>
+
+      </a>
+
+      <!-- Mobile -->
+      <button
+        (click)="toggleMenu()"
+        class="lg:hidden w-11 h-11 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center text-white">
+
+        <i
+          [class]="menuOpen() ? 'pi pi-times' : 'pi pi-bars'"
+          class="text-xl">
+        </i>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div
+    *ngIf="menuOpen()"
+    class="lg:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
+
+    <div class="p-5 space-y-2">
+
+      <a
+        routerLink="/"
+        (click)="closeMenu()"
+        routerLinkActive
+        #mhome="routerLinkActive"
+        [routerLinkActiveOptions]="{exact:true}"
+        class="block rounded-xl px-4 py-3 transition"
+        [ngClass]="mhome.isActive ? 'bg-cyan-500 text-white' : 'text-slate-300 hover:bg-white/5'">
+
+        Home
+
+      </a>
+
+      <a
+        routerLink="/services"
+        (click)="closeMenu()"
+        routerLinkActive
+        #mservices="routerLinkActive"
+        class="block rounded-xl px-4 py-3 transition"
+        [ngClass]="mservices.isActive ? 'bg-cyan-500 text-white' : 'text-slate-300 hover:bg-white/5'">
+
+        Services
+
+      </a>
+
+      <a
+        routerLink="/portfolio"
+        (click)="closeMenu()"
+        routerLinkActive
+        #mportfolio="routerLinkActive"
+        class="block rounded-xl px-4 py-3 transition"
+        [ngClass]="mportfolio.isActive ? 'bg-cyan-500 text-white' : 'text-slate-300 hover:bg-white/5'">
+
+        Portfolio
+
+      </a>
+
+      <a
+        routerLink="/about"
+        (click)="closeMenu()"
+        routerLinkActive
+        #mabout="routerLinkActive"
+        class="block rounded-xl px-4 py-3 transition"
+        [ngClass]="mabout.isActive ? 'bg-cyan-500 text-white' : 'text-slate-300 hover:bg-white/5'">
+
+        About
+
+      </a>
+
+      <a
+        routerLink="/contact"
+        (click)="closeMenu()"
+        routerLinkActive
+        #mcontact="routerLinkActive"
+        class="block rounded-xl px-4 py-3 transition"
+        [ngClass]="mcontact.isActive ? 'bg-cyan-500 text-white' : 'text-slate-300 hover:bg-white/5'">
+
+        Contact
+
+      </a>
+
+      <a
+        routerLink="/contact"
+        (click)="closeMenu()"
+        class="mt-5 flex justify-center rounded-xl bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-600 px-5 py-3 font-semibold text-white shadow-lg">
+
+        Get Started
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
   `,
 })
 export class HeaderComponent {

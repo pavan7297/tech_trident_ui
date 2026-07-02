@@ -6,82 +6,254 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
   standalone: true,
   imports: [ReactiveFormsModule],
   template: `
-    <div class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-bold text-[#452829] mb-4">Get In Touch</h1>
-        <p class="text-lg text-[#57595B] max-w-2xl mx-auto">Ready to transform your business? Let's discuss your project and how we can help you scale.</p>
-        <div class="w-24 h-1.5 bg-[#452829] mx-auto rounded-full mt-6"></div>
-      </div>
+<section class="relative overflow-hidden bg-[#020617] py-24 isolate">
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div class="bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-sm">
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-[#452829]">Full Name</label>
-                <input formControlName="name" type="text" placeholder="Srinivas" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#452829] outline-none transition-all">
-              </div>
-              <div class="flex flex-col gap-2">
-                <label class="text-sm font-semibold text-[#452829]">Email Address</label>
-                <input formControlName="email" type="email" placeholder="srinivas@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#452829] outline-none transition-all">
-              </div>
-            </div>
+  <!-- Premium Background -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
 
-            <div class="flex flex-col gap-2">
-              <label class="text-sm font-semibold text-[#452829]">Phone Number</label>
-              <input formControlName="phone" type="tel" placeholder="+91 9502214310" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#452829] outline-none transition-all">
-            </div>
-
-            <div class="flex flex-col gap-2">
-              <label class="text-sm font-semibold text-[#452829]">Message</label>
-              <textarea formControlName="message" rows="5" placeholder="Tell us about your project..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#452829] outline-none transition-all"></textarea>
-            </div>
-
-            <button type="submit" [disabled]="contactForm.invalid" class="w-full bg-[#452829] text-white py-4 rounded-full font-bold hover:bg-[#57595B] transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
-              Send Message
-            </button>
-          </form>
-        </div>
-
-        <div class="flex flex-col gap-12">
-          <div class="space-y-8">
-            <div class="flex items-start gap-6">
-              <div class="flex-shrink-0 w-12 h-12 bg-[#F3E8DF] rounded-2xl flex items-center justify-center">
-                <i class="pi pi-envelope text-xl text-[#452829]"></i>
-              </div>
-              <div>
-                <h4 class="text-lg font-bold text-[#452829]">Email Us</h4>
-                <p class="text-[#57595B]">webworks62@gmail.com</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-6">
-              <div class="flex-shrink-0 w-12 h-12 bg-[#F3E8DF] rounded-2xl flex items-center justify-center">
-                <i class="pi pi-phone text-xl text-[#452829]"></i>
-              </div>
-              <div>
-                <h4 class="text-lg font-bold text-[#452829]">Call Us</h4>
-                <p class="text-[#57595B]">+91 9502214310</p>
-              </div>
-            </div>
-            <!-- <div class="flex items-start gap-6">
-              <div class="flex-shrink-0 w-12 h-12 bg-[#F3E8DF] rounded-2xl flex items-center justify-center">
-                <i class="pi pi-map-marker text-xl text-[#452829]"></i>
-              </div>
-              <div>
-                <h4 class="text-lg font-bold text-[#452829]">Location</h4>
-                <p class="text-[#57595B]">Global Delivery Center, Tech Hub Blvd, Silicon Valley</p>
-              </div>
-            </div>
-          </div> -->
-
-          <div class="bg-gray-200 rounded-3xl h-80 relative overflow-hidden shadow-inner">
-            <div class="absolute inset-0 flex items-center justify-center text-gray-500 italic">
-              Google Map Integration
-            </div>
-          </div>
-        </div>
-      </div>
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#07142B] to-slate-950">
     </div>
+
+    <div
+      class="absolute -top-60 -left-40 w-[45rem] h-[45rem] rounded-full bg-cyan-500/15 blur-[200px] animate-pulse">
+    </div>
+
+    <div
+      class="absolute top-20 -right-52 w-[40rem] h-[40rem] rounded-full bg-blue-500/15 blur-[180px] animate-pulse"
+      style="animation-delay:2s">
+    </div>
+
+    <div
+      class="absolute bottom-0 left-1/3 w-[35rem] h-[35rem] rounded-full bg-violet-500/15 blur-[180px] animate-pulse"
+      style="animation-delay:4s">
+    </div>
+
+    <div
+      class="absolute inset-0 opacity-[0.05]"
+      style="
+        background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+        background-size:70px 70px;
+      ">
+    </div>
+
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-20">
+
+      <span
+        class="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-5 py-2 text-cyan-300 font-semibold">
+
+        <i class="pi pi-send"></i>
+
+        Contact Us
+
+      </span>
+
+      <h2
+        class="mt-8 text-5xl md:text-7xl font-black text-white">
+
+        Let's Build Something
+
+        <span
+          class="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
+
+          Amazing
+
+        </span>
+
+      </h2>
+
+      <p
+        class="mt-8 text-xl text-slate-300 leading-9 max-w-3xl mx-auto">
+
+        Whether you're launching a startup, scaling your business,
+        or building an enterprise solution, our team is ready to
+        turn your ideas into reality.
+
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <!-- Contact Form -->
+      <div
+        class="rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl p-10 shadow-2xl">
+
+        <form
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
+          class="space-y-6">
+
+          <div class="grid md:grid-cols-2 gap-6">
+
+            <div>
+
+              <label class="block mb-2 text-sm font-semibold text-slate-300">
+                Full Name
+              </label>
+
+              <input
+                formControlName="name"
+                type="text"
+                placeholder="John Doe"
+                class="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 outline-none transition">
+
+            </div>
+
+            <div>
+
+              <label class="block mb-2 text-sm font-semibold text-slate-300">
+                Email
+              </label>
+
+              <input
+                formControlName="email"
+                type="email"
+                placeholder="john@example.com"
+                class="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 outline-none transition">
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <label class="block mb-2 text-sm font-semibold text-slate-300">
+              Phone Number
+            </label>
+
+            <input
+              formControlName="phone"
+              type="tel"
+              placeholder="+91 9502214310"
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 outline-none transition">
+
+          </div>
+
+          <div>
+
+            <label class="block mb-2 text-sm font-semibold text-slate-300">
+              Project Details
+            </label>
+
+            <textarea
+              formControlName="message"
+              rows="6"
+              placeholder="Tell us about your project..."
+              class="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 outline-none transition">
+            </textarea>
+
+          </div>
+
+          <button
+            type="submit"
+            [disabled]="contactForm.invalid"
+            class="w-full rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-600 py-4 text-lg font-bold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(6,182,212,.45)] disabled:opacity-50">
+
+            Send Message
+
+            <i class="pi pi-arrow-right ml-2"></i>
+
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- Contact Details -->
+      <div class="space-y-8">
+
+        <div
+          class="rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-cyan-400/40 transition">
+
+          <div class="flex items-center gap-5">
+
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+
+              <i class="pi pi-envelope text-2xl text-white"></i>
+
+            </div>
+
+            <div>
+
+              <h3 class="text-2xl font-bold text-white">
+                Email
+              </h3>
+
+              <p class="text-slate-300">
+                webworks62@gmail.com
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div
+          class="rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl p-8 hover:border-blue-400/40 transition">
+
+          <div class="flex items-center gap-5">
+
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+
+              <i class="pi pi-phone text-2xl text-white"></i>
+
+            </div>
+
+            <div>
+
+              <h3 class="text-2xl font-bold text-white">
+                Phone
+              </h3>
+
+              <p class="text-slate-300">
+                +91 9502214310
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div
+          class="rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden">
+
+          <!-- Replace this with your Google Maps iframe -->
+          <div
+            class="h-80 flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-slate-400">
+
+            <div class="text-center">
+
+              <i class="pi pi-map-marker text-5xl mb-4 text-cyan-400"></i>
+
+              <p class="text-lg">
+                Google Map Integration
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
   `
 })
 export class ContactComponent {

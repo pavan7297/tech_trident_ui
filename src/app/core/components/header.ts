@@ -18,8 +18,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       routerLink="/"
       class="flex items-center gap-3 group">
 
-      <div
-        class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition duration-300 group-hover:rotate-6">
+      <!-- <div
+        class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition duration-300 group-hover:rotate-6"> -->
 
 <!-- <div -->
   <!-- class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition duration-300 group-hover:rotate-6"> -->
@@ -31,7 +31,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 <!-- </div> -->
 
-      </div>
+      <!-- </div> -->
 
       <div>
 
